@@ -1,5 +1,5 @@
 import inquirer from "inquirer";
-const currency = {
+const currency: any = {
     USD: 1,
     EURO: 0.91,
     GBP: 0.76,
@@ -28,17 +28,9 @@ let user_answer = await inquirer.prompt([
     }
 ]
 );
-// if (user_answer.fcurrency == currency.USD){
-//     user_answer.fcurrency = 1;
-// } else if (user_answer.fcurrency == currency.EURO){
-//     user_answer.fcurrency = 0.91;
-// } else if (user_answer.fcurrency == currency.GBP){
-//     user_answer.fcurrency = 0.76;
-// } else if (user_answer.fcurrency == currency.PKR){
-//     user_answer.fcurrency = 280;
-// }
-let fromAmount = currency(user_answer.fcurrency);
-let toAmount = user_answer.tcurrency;
+
+let fromAmount = currency[user_answer.fcurrency];
+let toAmount = currency[user_answer.tcurrency];
 let amount = user_answer.amount;
 let baseAmount = amount / fromAmount;
 let convertAmount = baseAmount * toAmount;
