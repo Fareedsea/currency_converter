@@ -1,4 +1,5 @@
-import inquirer from 'inquirer'
+#!/usr/bin/env node
+import inquirer from "inquirer";
 const currency: any = {
     USD: 1,
     EUR: 0.91,
@@ -6,13 +7,6 @@ const currency: any = {
     INR: 74.57,
     PKR: 280,
 };
-// const USD = 1;
-// const EUR = 0.91;
-// const GBP = 0.76;
-// const INR = 74.57;
-// const PKR = 280;
-
-
 let user_answer = await inquirer.prompt(
 [
     { 
@@ -34,15 +28,8 @@ let user_answer = await inquirer.prompt(
     }
 ]
 );
-// if (user_answer.fcurrency == currency.USD){
-//     user_answer.fcurrency = 1;
-// } else if (user_answer.fcurrency == currency.EUR){
-//     user_answer.fcurrency = 0.91;
-// } else if (user_answer.fcurrency == currency.GBP){
-//     user_answer.fcurrency = 0.76;
-// } else if (user_answer.fcurrency == currency.PKR){
-//     user_answer.fcurrency = 280;
-// }
+
+
 let fromAmount = currency[user_answer.fcurrency];
 let toAmount = currency[user_answer.tcurrency];
 let amount = user_answer.amount;
