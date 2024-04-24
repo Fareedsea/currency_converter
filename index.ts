@@ -36,6 +36,6 @@ let toAmount = currency[user_answer.tcurrency];
 let amount = user_answer.amount;
 let baseAmount = amount / fromAmount;
 let convertAmount = baseAmount * toAmount;
-console.log(chalk.red.bgYellow(`Your Curreny Convert Amount ${user_answer.tcurrency} is = ${convertAmount}`));
+console.log(chalk.red.bgYellow(`Your Curreny Convert Amount in ${user_answer.tcurrency} = ${convertAmount}`));
 
 
