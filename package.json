@@ -1,10 +1,12 @@
 {
   "name": "fsea-currency_converter",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "This is a Project of Currency Converter on Github Repository",
   "main": "index.js",
   "type": "module",
-  "bin": "index.js",
+  "bin": {
+    "fsea-currency_converter": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
